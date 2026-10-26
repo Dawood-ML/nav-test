@@ -1,0 +1,21 @@
+{
+  "name": "nav-test",
+  "version": "1.0.0",
+  "description": "A simple local-first to-do app",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dawood-ML/nav-test.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dawood-ML/nav-test/issues"
+  },
+  "homepage": "https://github.com/Dawood-ML/nav-test#readme",
+  "private": "true"
+}

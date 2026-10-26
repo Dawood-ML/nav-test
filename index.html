@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Daylist — Your tasks, in order</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="header">
+      <a class="brand" href="/" aria-label="Daylist home"><span class="brand-icon">✓</span> daylist<span class="brand-dot">.</span></a>
+      <span class="header-note">A LITTLE SPACE TO FOCUS</span>
+    </header>
+    <section class="workspace" aria-labelledby="title">
+      <div class="eyebrow"><span class="status-dot"></span> YOUR PERSONAL WORKSPACE</div>
+      <h1 id="title">Make room for<br><em>what matters.</em></h1>
+      <p class="intro">A clear mind starts with a simple list. Take it one task at a time.</p>
+      <form id="task-form" class="task-form">
+        <label class="sr-only" for="task-input">Add a task</label>
+        <input id="task-input" name="task" placeholder="What needs doing?" maxlength="200" autocomplete="off" required>
+        <button class="add-button" type="submit"><span aria-hidden="true">+</span> Add task</button>
+      </form>
+      <div class="list-heading"><div><span class="section-label">THE LIST</span><h2>Your tasks <span id="total-count">0</span></h2></div><span class="saved-note">Saved on this device</span></div>
+      <nav class="filters" aria-label="Filter tasks">
+        <button type="button" class="filter active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter" data-filter="active" aria-pressed="false">Active</button>
+        <button type="button" class="filter" data-filter="completed" aria-pressed="false">Completed</button>
+      </nav>
+      <ul id="task-list" class="task-list" aria-label="Tasks"></ul>
+      <div id="empty" class="empty"><span class="empty-icon" aria-hidden="true">✳</span><p>Nothing here yet.</p><span>Add a task above to get started.</span></div>
+      <div class="list-footer"><span id="remaining" aria-live="polite">0 tasks remaining</span><button id="clear-completed" type="button">Clear completed</button></div>
+      <p id="storage-error" class="storage-error" role="alert" hidden>Tasks could not be saved on this device. Changes may be lost when you close this page.</p>
+    </section>
+    <footer class="page-footer"><span>TAKE IT ONE THING AT A TIME.</span><span>MADE FOR THE EVERYDAY ✳</span></footer>
+  </main>
+</body>
+</html>
